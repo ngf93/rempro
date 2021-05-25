@@ -2,8 +2,6 @@
 header nav ul, #sec-2 nav ul {
   list-style: none;
   padding: 0;
-  display: flex;
-  align-items: center;
 }
 .logo {max-width: 190px;}
 @media (max-width: 1199px){
@@ -12,22 +10,149 @@ header nav ul, #sec-2 nav ul {
 @media (max-width: 991px){
   .logo {max-width: 120px;}
 }
-@media (max-width: 767px){
-  header .container {
-    flex-wrap: wrap;
-  }
+@media (max-width: 575px){
   header .container .flex-1 {
-    width: 100%;
+    width: fit-content;
     flex: unset;
   }
 }
-@media (max-width: 575px){
-  header .container .flex-1>div {
-    flex-wrap: wrap;
-    justify-content: space-between;
+
+nav#catalog-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 600px;
+  justify-content: center;
+  align-items: stretch;
+  z-index: 100;
+}
+.cm-left {
+  background-color: #ECECEC;
+  width: calc(50% - 330px);
+  padding: 3em 0;
+}
+.cm-first-level {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  border-right: 6px solid transparent;
+  margin-bottom: .5em;
+}
+.cm-first-level.active {
+  background-color: #fff;
+  border-right: 6px solid var(--color-2);
+}
+.cm-left .cont {
+  width: 330px;
+  display: block;
+  padding: .5em 0;
+}
+.cm-right {
+  background-color: #fff;
+  width: calc(50% + 330px);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  overflow: auto;
+}
+.cm-right>div {
+  display: none;
+  width: 990px;
+  padding: 3em 6em;
+}
+.cm-right>div.visible {display: block;}
+@media (max-width: 1399px){
+  .cm-left {width: calc(50% - 285px);}
+  .cm-left .cont {width: 285px;}
+  .cm-right {width: calc(50% + 285px);}
+  .cm-right>div {width: 855px;}
+}
+@media (max-width: 1199px){
+  .cm-left {width: calc(50% - 160px);}
+  .cm-left .cont {width: 320px;}
+  .cm-right {width: calc(50% + 160px);}
+  .cm-right>div {width: 640px;}
+}
+@media (max-width: 991px){
+  .cm-left {width: calc(50% - 120px);}
+  .cm-left .cont {width: 240px;}
+  .cm-right {width: calc(50% + 120px);}
+  .cm-right>div {
+    width: 480px;
+    padding: 2em 3em;
   }
+  nav#catalog-menu {height: 500px;}
 }
 
+.accordion-button[aria-expanded="false"] {
+  background-color: #ECECEC;
+  outline: none;
+  border-bottom: 3px solid transparent;
+  color: var(--color-1);
+}
+.accordion-button:focus {
+  border-color: var(--color-2);
+  outline: 0;
+  box-shadow: none;
+}
+.accordion-button[aria-expanded="true"]{
+  background-color: #fff;
+  border-bottom: 3px solid var(--color-2);
+  color: #000;
+}
+.accordion-button::after {content: unset;}
+
+
+.cart-box {
+  position: relative;
+  z-index: 1;
+}
+.cart-box:hover {
+  filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.1));
+}
+#btn-cart {
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+#shopping-cart {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 350px;
+  max-height: 500px;
+  background-color: #fff;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  z-index: 1000;
+  overflow: hidden;
+}
+.cart-box:hover #shopping-cart{
+  display: block;
+}
+#shopping-cart .item {
+  display: flex;
+  align-items: center;
+  padding: .5em;
+  border-bottom: 1px solid var(--color-1);
+}
+#shopping-cart .item:last-child {
+  border-bottom: none;
+}
+#shopping-cart .item>img {
+  width: 90px;
+  height: 90px;
+  margin-right: .5em;
+}
+.one-line {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 200px;
+}
 
 /* section 3 */
 .carousel-caption {
@@ -168,6 +293,9 @@ header nav ul, #sec-2 nav ul {
   .product-preview {padding: .5em;}
   .product-preview img.prod-img {height: 150px;}
 }
+@media (max-width: 575px){
+  .product-preview img.prod-img {height: 80vw;}
+}
 
 
 /* section 6 */
@@ -296,6 +424,7 @@ header nav ul, #sec-2 nav ul {
 }
 @media (max-width: 575px){
   #sec-8>section::before, #sec-8>section::after {content: unset;}
+  #sec-8 .container::before {border:none;}
 }
 
 
@@ -373,6 +502,10 @@ header nav ul, #sec-2 nav ul {
     width: 1em;
   }
 }
+@media (max-width: 767px){
+  .pf-img {height: 90vw;}
+  .pf-img-mini {height: 33vw;}
+}
 
 
 /* section 10 */
@@ -432,6 +565,9 @@ article.preview .desc {
     height: 210px;
     margin-bottom: 0;
   }
+}
+@media (max-width: 575px){
+  article.preview img.img-article {height: 90vw;}
 }
 
 
