@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Ремонт Про - Каталог</title>
+	<title>Ремонт Про - Каталог - Товар</title>
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="css/bootstrap.min.css" />
 	<link rel="stylesheet" href="css/common.css" />
@@ -237,467 +237,103 @@
 	</section>
 
 	<main class="container py-5">
-		<nav aria-label="breadcrumb">
+		<nav>
 			<ol class="breadcrumb">
 				<li class="breadcrumb-item"><a href="#">Главная</a></li>
-				<li class="breadcrumb-item active" aria-current="page">Краски</li>
+				<li class="breadcrumb-item"><a href="#">Краски</a></li>
+				<li class="breadcrumb-item"><a href="#">Paint&Paper Library</a></li>
+				<li class="breadcrumb-item"><a href="#">Ashes of Roses</a></li>
 			</ol>
 		</nav>
 
-		<section id="sec-12">
-			<h3 class="text-start">Краски</h3>
-			<div class="row">
-				<div class="col-md-4 col-lg-3 mb-4 mb-md-0">
-					<button class="d-block d-md-none btn_main btn_2 f_13" type="button" onclick="toggle(this.nextElementSibling);">Фильтр</button>
-					<form class="form-filter">
-						<fieldset class="mb-4">
-							<div class="f_15 fw_3 mb-3 mb-xl-4">Бренд</div>
-							<div class="checkbox mb-2 mb-xl-3">
-								<input type="checkbox" name="brand" value="Little Greene">
-								<label>Little Greene</label>
-							</div>
-							<div class="checkbox mb-2 mb-xl-3">
-								<input type="checkbox" name="brand" value="Paint&Paper Library">
-								<label>Paint&Paper Library</label>
-							</div>
-						</fieldset>
-						
-						<div class="f_15 fw_3 mb-3 mb-xl-4">Стоимость</div>
-						<div class="d-flex align-items-baseline black mb-3">
-							<div class="me-2">от</div>
-							<input class="p-md-1 p-xl-2" type="number" id="range-val-1" data-connect="multirange-1" min="0" max="10000" value="1000" oninput="reverse(this.dataset.connect, this.value)">
-							<div class="ms-3 ms-xl-4 me-2">до</div>
-							<input class="p-md-1 p-xl-2" type="number" id="range-val-2" data-connect="multirange-2" min="0" max="10000" value="9000" oninput="reverse(this.dataset.connect, this.value)">
-							<div class="rubik f_13 ms-2">₽</div>
-						</div>
-						<!-- Double range slider (flat design)  -->
-						<div class="range-slider flat mb-4" data-ticks-position='top' style='--min:0; --max:10000; --value-a:1000; --value-b:9000; --suffix:""; --text-value-a:"1000"; --text-value-b:"9000";'>
-							<input type="range" min="0" max="10000" value="1000" oninput="this.parentNode.style.setProperty('--value-a',this.value); this.parentNode.style.setProperty('--text-value-a', JSON.stringify(this.value)); connect(this.dataset.connect, this.value)" data-connect="range-val-1" id="multirange-1">
-							<!-- <output></output> -->
-							<input type="range" min="0" max="10000" value="9000" oninput="this.parentNode.style.setProperty('--value-b',this.value); this.parentNode.style.setProperty('--text-value-b', JSON.stringify(this.value)); connect(this.dataset.connect, this.value)" data-connect="range-val-2" id="multirange-2">
-							<!-- <output></output> -->
-							<div class='range-slider__progress'></div>
-						</div>
-					</form>
-				</div>
-				<div class="col-md-8 col-lg-9">
-					<form class="form-sort">
-						<div class="f_15 fw_3 mb-3 mb-sm-0">Сортировка</div>
-						<div class="d-flex">
-							<div class="radio-text f_12">
-								<input type="radio" name="sort" value="descending" checked>
-								<label>По убыванию цены</label>
-							</div>
-							<div class="radio-text f_12 ms-3 ms-sm-4">
-								<input type="radio" name="sort" value="ascending">
-								<label>По возрастанию цены</label>
-							</div>
-						</div>
-					</form>
-					
-					<div class="row g-4 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 mb-4">
-						<div>
-							<div class="product-preview">
-								<img src="images/Rectangle 30.jpg" class="prod-img">
-								<div class="title"><a href="#">Ashes of Roses <br>Paint&Paper Library</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>	
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">1800</span> 
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
+		<section id="sec-13">
+			<h3 class="text-start">Ashes of Roses</h3>
+			<div class="row row-cols-2">
+				<div>
+					<div class="">
+						<div class="swiper-product">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="images/Rectangle 30.jpg" class="img-fluid">
 								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
+								<div class="swiper-slide">
+									<img src="images/Rectangle 31.jpg" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="images/Rectangle 32.jpg" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="images/Rectangle 33.jpg" class="img-fluid">
 								</div>
 							</div>
 						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/p-5.jpg" class="prod-img">
-								<div class="title"><a href="#">Traditional Oil Gloss(Oil Gloss), глянцевая масляная краска, 85%, 1 л</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">2520</span> 
-											<span class="rubik">₽</span>
-										</div>
-										<div class="color-4 ms-2">
-											<span class="text-decoration-line-through">2800</span>
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
+						<div class="swiper-product-mini">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<img src="images/Rectangle 30.jpg" class="img-fluid">
 								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
+								<div class="swiper-slide">
+									<img src="images/Rectangle 31.jpg" class="img-fluid">
 								</div>
-								<div class="discount">
-									<div class="rubik f_12 fw_7 black">10%</div>
+								<div class="swiper-slide">
+									<img src="images/Rectangle 32.jpg" class="img-fluid">
+								</div>
+								<div class="swiper-slide">
+									<img src="images/Rectangle 33.jpg" class="img-fluid">
 								</div>
 							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/Rectangle 30.jpg" class="prod-img">
-								<div class="title"><a href="#">Ashes of Roses <br>Paint&Paper Library</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>	
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">1800</span> 
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
+							<div class="swiper-button-prev">
+								<img src="images/icons/up.svg" alt="">
 							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/p-5.jpg" class="prod-img">
-								<div class="title"><a href="#">Traditional Oil Gloss(Oil Gloss), глянцевая масляная краска, 85%, 1 л</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">2520</span> 
-											<span class="rubik">₽</span>
-										</div>
-										<div class="color-4 ms-2">
-											<span class="text-decoration-line-through">2800</span>
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-								<div class="discount">
-									<div class="rubik f_12 fw_7 black">10%</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/Rectangle 30.jpg" class="prod-img">
-								<div class="title"><a href="#">Ashes of Roses <br>Paint&Paper Library</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>	
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">1800</span> 
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview not-available">
-								<img src="images/p-5.jpg" class="prod-img">
-								<div class="title"><a href="#">Traditional Oil Gloss(Oil Gloss), глянцевая масляная краска, 85%, 1 л</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">2520</span> 
-											<span class="rubik">₽</span>
-										</div>
-										<div class="color-4 ms-2">
-											<span class="text-decoration-line-through">2800</span>
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-								<div class="discount">
-									<div class="rubik f_12 fw_7 black">10%</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/Rectangle 30.jpg" class="prod-img">
-								<div class="title"><a href="#">Ashes of Roses <br>Paint&Paper Library</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>	
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">1800</span> 
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/p-5.jpg" class="prod-img">
-								<div class="title"><a href="#">Traditional Oil Gloss(Oil Gloss), глянцевая масляная краска, 85%, 1 л</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">2520</span> 
-											<span class="rubik">₽</span>
-										</div>
-										<div class="color-4 ms-2">
-											<span class="text-decoration-line-through">2800</span>
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-								<div class="discount">
-									<div class="rubik f_12 fw_7 black">10%</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/Rectangle 30.jpg" class="prod-img">
-								<div class="title"><a href="#">Ashes of Roses <br>Paint&Paper Library</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>	
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">1800</span> 
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/p-5.jpg" class="prod-img">
-								<div class="title"><a href="#">Traditional Oil Gloss(Oil Gloss), глянцевая масляная краска, 85%, 1 л</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">2520</span> 
-											<span class="rubik">₽</span>
-										</div>
-										<div class="color-4 ms-2">
-											<span class="text-decoration-line-through">2800</span>
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-								<div class="discount">
-									<div class="rubik f_12 fw_7 black">10%</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview">
-								<img src="images/Rectangle 30.jpg" class="prod-img">
-								<div class="title"><a href="#">Ashes of Roses <br>Paint&Paper Library</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>	
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">1800</span> 
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="product-preview not-available">
-								<img src="images/p-5.jpg" class="prod-img">
-								<div class="title"><a href="#">Traditional Oil Gloss(Oil Gloss), глянцевая масляная краска, 85%, 1 л</a></div>
-								<div class="brand">Бренд: Paint&Paper Library</div>
-								<div class="d-flex justify-content-between align-items-center">
-									<div class="d-flex align-items-baseline">
-										<span class="me-2">Цена:</span>
-										<div class="black f_12">
-											<span class="fw_6">2520</span> 
-											<span class="rubik">₽</span>
-										</div>
-										<div class="color-4 ms-2">
-											<span class="text-decoration-line-through">2800</span>
-											<span class="rubik">₽</span>
-										</div>
-									</div>
-									<input type="checkbox" class="checkbox-fav">
-								</div>
-								<div class="row g-2 row-cols-2 mt-3 f_09">
-									<div>
-										<a class="btn_main btn_2 w-100 h-100 px-1">Подробнее</a>
-									</div>
-									<div>
-										<button type="button" class="btn_main btn_1 w-100 px-1">
-											<img src="images/icons/shopping-cart-white.svg" class="me-1">
-											В корзину
-										</button>
-									</div>
-								</div>
-								<div class="discount">
-									<div class="rubik f_12 fw_7 black">10%</div>
-								</div>
+							<div class="swiper-button-next">
+								<img src="images/icons/down.svg" alt="">
 							</div>
 						</div>
 					</div>
-
-					<button type="button" class="btn_main btn_2 w-100 f_12">Показать ещё</button>
-					<nav class="mt-4">
-						<ul class="pagination">
-							<li class="page-item">
-								<a class="page-link" href="#">
-									<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M7 13L1 7L7 1" stroke="#2F2F2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>									
-								</a>
-							</li>
-							<li class="page-item"><a class="page-link active" href="#">1</a></li>
-							<li class="page-item"><a class="page-link" href="#">2</a></li>
-							<li class="page-item"><a class="page-link" href="#">3</a></li>
-							<li class="page-item">
-								<a class="page-link" href="#">
-									<svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M1 13L7 7L1 1" stroke="#2F2F2F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-									</svg>									
-								</a>
-							</li>
-						</ul>
-					</nav>
+					
+					<!-- <img src="images/Rectangle 30.jpg" class="img-fluid"> -->
+				</div>
+				<div>
+					<div class="title-underline mb-5">
+						<div class="text-end f_15 fw_3 pb-2">В наличии 5 штук</div>
+					</div>
+					<div class="d-flex align-items-baseline mb-3">
+						<span class="f_13">Артикул:</span>
+						<span class="f_15 fw_3 ms-4">PLGASP1</span>
+					</div>
+					<div class="d-flex align-items-baseline mb-3">
+						<span class="f_13">Бренд:</span>
+						<span class="f_15 fw_3 ms-4">Paint&Paper Library</span>
+					</div>
+					<div class="d-flex align-items-baseline mb-3">
+						<span class="f_13">Расход, кв. м/л:</span>
+						<span class="f_15 fw_3 ms-4">14</span>
+					</div>
+					<div class="d-flex align-items-baseline mb-3">
+						<span class="f_13">Литраж:</span>
+						<span class="f_15 fw_3 ms-4">1</span>
+					</div>
+					<div class="d-flex align-items-baseline mb-3">
+						<span class="f_13">Назначение:</span>
+						<span class="f_15 fw_3 ms-4">Любые поверхности</span>
+					</div>
+					<div class="d-flex align-items-baseline mb-3">
+						<span class="f_13">Цена:</span>
+						<div class="f_15 rubik">
+							<span class="fw_5 ms-4">1800</span>
+							<span class="ms-1">₽</span>
+						</div>
+						<div class="ms-4 l-gray rubik text-decoration-line-through">
+							<span class="fw_5">2000</span>
+							<span class="f_11 ms-1">₽</span>
+						</div>
+					</div>
+					<div class="mt-5 d-flex">
+						<button class="btn_main btn_1 f_12">Добавить в корзину</button>
+						<div class="btn_main btn_1 ms-4 ">
+							<input type="checkbox" class="checkbox-fav ch-f-2">
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
