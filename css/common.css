@@ -27,6 +27,9 @@ body {
 @media (max-width: 767px){
     body {font-size: 14px;}
 }
+@media (max-width: 575px){
+    body {font-size: 13px;}
+}
 
 
 a, a:hover, a:focus, a:active {
@@ -182,20 +185,22 @@ select:hover {cursor: pointer;}
     padding: 0px;
     width: 1.3em;
     height: 1.3em;
-    background: url(../images/icons/heart-black-stroke.svg) no-repeat;
+    background: url(../images/icons/heart-black-stroke.svg) no-repeat center;
     background-size: contain;
 }
 .checkbox-fav:checked {
-    background: url(../images/icons/heart-black-fill.svg) no-repeat;
+    background: url(../images/icons/heart-black-fill.svg) no-repeat center;
     background-size: contain;
 }
 .ch-f-2 {
     width: 1.5em;
     height: 1.5em;
-    background: url(../images/icons/heart-white-stroke.svg) no-repeat;
+    background: url(../images/icons/heart-white-stroke.svg) no-repeat center;
+    background-size: contain;
 }
 .ch-f-2:checked {
-    background: url(../images/icons/heart-white-fill.svg) no-repeat;
+    background: url(../images/icons/heart-white-fill.svg) no-repeat center;
+    background-size: contain;
 }
 
 /* кнопки */
@@ -323,6 +328,9 @@ h4 {
     background-color: #000;
     height: 1px;
     z-index: 10;
+}
+@media (max-width: 767px){
+    .title-underline div::after {width: 100%;}
 }
 @media (max-width: 575px){
     .title-underline h2::after {width: 100%;}
