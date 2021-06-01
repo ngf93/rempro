@@ -24,8 +24,6 @@ arr_sliders_1.forEach(function(item, i, arr) {
   });
 });
 
-
-
 const swiper4 = new Swiper('.swiper-product-mini', {
   direction:'horizontal',
   slidesPerView: 3,
@@ -37,6 +35,7 @@ const swiper4 = new Swiper('.swiper-product-mini', {
   },
   breakpoints: {
     576: {
+      direction:'horizontal',
       spaceBetween: 20,
       height: 120,
     },
@@ -46,12 +45,15 @@ const swiper4 = new Swiper('.swiper-product-mini', {
       spaceBetween: 10,
     },
     992: {
+      direction:'vertical',
       height: 240,
     },
     1200: {
+      direction:'vertical',
       height: 320,
     },
     1400: {
+      direction:'vertical',
       height: 380,
       spaceBetween: 20,
     }
@@ -81,6 +83,8 @@ const swiper3 = new Swiper('.swiper-product', {
   }
 });
 
+
+const myViewer = new ImgPreviewer('.img-preview-box');
 
 
 /* current year */

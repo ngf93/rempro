@@ -47,18 +47,6 @@ p, label, span, a, form, select, div, blockquote, cite, figure, figcaption, ul, 
     margin-bottom: 0px;
 }
 
-.mb6 {margin-bottom: 6em;}
-@media (max-width: 575px){.mb6 {margin-bottom: 4em;}}
-
-.bg_color_2 {background-color: var(--color-2);}
-.bg_color_2-2 {background-color: rgb(var(--rgb-color-2)/11%);}
-.bg_color_3 {background-color: var(--color-3);}
-.bg_color-5 {background-color: rgb(var(--rgb-color-5)/20%);}
-
-.flex-1 {
-    flex: 1;
-}
-
 
 /* FORMS CUSTOMIZATION */
 input, input:hover, input:focus, input:active,
@@ -94,7 +82,7 @@ input.simple {
     border: none;
     background-color: transparent;
     padding: 0px;
-    width: 50px;
+    width: 3.125em;
 }
 
 /* SELECT simple */
@@ -171,8 +159,37 @@ select:hover {cursor: pointer;}
     z-index: 10;
 }
 .radio-text label {color: #828282;}
-.radio-text input[type="radio"]:checked + label {
+.radio-text input[type="radio"]:checked + label {color: #000;}
+
+.radio-btn {position: relative;}
+.radio-btn input[type="radio"] {
+    appearance:none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    box-shadow: none;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+.radio-btn label {
+    display: block;
+    font-family: "Rubik";
     color: #000;
+    border: 1px solid #000;
+    line-height: 1.2em;
+    padding: .6em;
+    transition: .2s;
+    text-align: center;
+}
+.radio-btn input[type="radio"]:checked + label {
+    color: #fff;
+    border: 1px solid var(--color-1);
+    background-color: var(--color-1);
 }
 
 
@@ -251,6 +268,11 @@ button:hover, button:focus, button:active {cursor: pointer;}
     background-color: #fff;
     padding: .2em;
     min-height: unset;
+}
+.btn-mini img {
+    width: 1em;
+    height: 1em;
+    object-fit: contain;
 }
 
 
@@ -331,9 +353,9 @@ h4 {
 }
 @media (max-width: 767px){
     .title-underline div::after {width: 100%;}
-}
-@media (max-width: 575px){
     .title-underline h2::after {width: 100%;}
+    h2 {font-size: 1.5em;}
+    h3 {font-size: 2em;}
 }
 
 .mont {font-family: 'Montserrat', sans-serif;}
@@ -379,3 +401,24 @@ h4 {
 .lh_n {line-height: normal;}
 .bb_1 {border-bottom: 1px solid;}
 .t_ind {text-indent: 2rem;}
+
+
+.mb6 {margin-bottom: 6em;}
+@media (max-width: 575px){.mb6 {margin-bottom: 4em;}}
+
+.bg_color_2 {background-color: var(--color-2);}
+.bg_color_2-2 {background-color: rgb(var(--rgb-color-2)/11%);}
+.bg_color_3 {background-color: var(--color-3);}
+.bg_color-5 {background-color: rgb(var(--rgb-color-5)/20%);}
+
+.flex-1 {
+    flex: 1;
+}
+
+hr {
+    background-color: #000;
+    height: 1px;
+    border: none;
+    width: 100%;
+    opacity: 1;
+}
