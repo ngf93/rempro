@@ -83,7 +83,6 @@ const swiper3 = new Swiper('.swiper-product', {
   }
 });
 
-
 const myViewer = new ImgPreviewer('.img-preview-box');
 
 
@@ -100,9 +99,6 @@ document.querySelector('#catalog-menu').onmouseleave = function(e) {
   document.querySelector('#catalog-menu').style.display = 'none';
 }
 
-document.querySelector('.cm-first-level').onmouseenter = function() {
-  
-}
 
 /** categories menu **/
 let arr_menu_items = Array.from(document.querySelectorAll('.cm-first-level'));
@@ -133,3 +129,14 @@ function reverse(id, val){
 function toggle(el){
   el.style.display = (el.style.display == 'block') ? 'none' : 'block'
 }
+
+
+let anchors = Array.from(document.querySelectorAll('.to-anchor'));
+arr_selects.forEach(function(item, i, arr) {
+  item.addEventListener('click', () => {
+    document.querySelectorAll(item.href).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
