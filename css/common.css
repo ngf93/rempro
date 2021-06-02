@@ -141,9 +141,7 @@ select:hover {cursor: pointer;}
 .checkbox label {flex: 1;}
 
 /* radiobutton customization */
-.radio-text {
-    position: relative;
-}
+.radio-text {position: relative;}
 .radio-text input[type="radio"] {
     appearance:none;
     -webkit-appearance:none;
@@ -273,6 +271,9 @@ button:hover, button:focus, button:active {cursor: pointer;}
     width: 1em;
     height: 1em;
     object-fit: contain;
+}
+.btn-mini:hover, .btn-mini:focus, .btn-mini:active {
+    background-color: var(--color-3);
 }
 
 

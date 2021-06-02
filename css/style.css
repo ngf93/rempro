@@ -901,6 +901,10 @@ ul.pagination .page-link:active svg path {
 }
 @media (max-width: 1199px){
   #form-cart .img-item {height: 120px;}
+  #form-cart fieldset.items {font-size: 12px;}
+}
+@media (max-width: 575px){
+  #form-cart .img-item {height: 27vw;}
 }
 
 
@@ -948,4 +952,35 @@ nav ol.breadcrumb .breadcrumb-item a {color: var(--color-4);}
 nav ol.breadcrumb .breadcrumb-item:last-child a {pointer-events: none;}
 .breadcrumb-item+.breadcrumb-item::before {
   content: "⟶";
+}
+
+
+/* modal window */
+.modal-dialog {max-width: 900px;}
+.modal-content {
+  background-color: #fff;
+  border: 1px solid #000;
+  border-radius: 0px;
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+.btn-close {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background: url(../images/icons/close.svg) no-repeat;
+  background-size: contain;
+  width: 1.5em;
+  height: 1.5em;
+}
+@media (max-width: 1199px){
+  .modal-dialog {max-width: 700px;}
+  .modal-content {min-height: 400px;}
+}
+@media (max-width: 991px){
+  .modal-dialog {max-width: 600px;}
+  .modal-content {min-height: 350px;}
 }
